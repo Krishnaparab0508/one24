@@ -1,0 +1,121 @@
+@font-face {
+  font-family: Product-Regular;
+  src: url("fonts/Product\ Sans\ Regular.ttf");
+}
+@font-face {
+  font-family: ProductBold;
+  src: url("fonts/Product\ Sans\ Bold.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Product-Regular;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+#main {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+nav {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  background-color: #c88e57;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+.part-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #c88e57;
+  position: relative;
+}
+.top-con {
+  text-align: center;
+  position: absolute;
+  top: 7%;
+  perspective: 800px;
+  perspective-origin: top;
+  color: #fff;
+}
+.top-content {
+  transform: rotateX(0);
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+.top-con h1 {
+  font-size: 5vw;
+  line-height: 12vh;
+}
+.btm-con {
+  position: absolute;
+  bottom: 12%;
+  perspective: 800px;
+  perspective-origin: bottom;
+  color: #fff;
+}
+.btm-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: rotateX(0);
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+.btm-con h1 {
+  font-size: 5vw;
+}
+.btm-con p {
+  font-size: 0.8vw;
+  width: 50%;
+}
+.img {
+  width: 50%;
+  height: 40%;
+  background-image: url(https://images.unsplash.com/photo-1701962541409-e2c1256a8574?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center;
+  background-size: cover;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1);
+}
+.part-2 {
+  width: 100%;
+  height: 100vh;
+}
+@media (max-width: 500px) {
+  .top-con h1 {
+    font-size: 12vw;
+    line-height: 7vh;
+  }
+  .btm-con h1 {
+    font-size: 12vw;
+    line-height: 7vh;
+  }
+  .btm-con p {
+    font-size: 2vw;
+    width: 90%;
+  }
+  .btm-con {
+    bottom: 8%;
+  }
+  .top-con{
+    top:15%;
+  }
+  nav{
+    gap:10vw;
+  }
+}
